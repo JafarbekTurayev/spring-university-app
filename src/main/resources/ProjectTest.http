@@ -1,0 +1,55 @@
+//university add
+###
+POST http://localhost:80/university/add
+Content-Type: application/json
+
+{
+  "name": "Politex",
+  "street": "N",
+  "city": "Chirchiq tumani",
+  "home": "128-A uy"
+}
+
+###
+
+//university list
+###
+GET http://localhost:80/university/list
+
+###
+
+//getone by id
+###
+GET http://localhost:80/university/4
+
+###
+### update
+PUT http://localhost:80/university/edit/4
+Content-Type: application/json
+
+{
+  "name": "Politex",
+  "street": "qani",
+  "city": "Chirchiq shahar",
+  "home": "128"
+}
+
+
+###
+
+### delete
+DELETE http://localhost:80/university/delete/1
+
+###
+
+//faculty
+###
+POST http://localhost:80/faculty/add
+Content-Type: application/json
+
+{
+  "name": "KIF",
+  "universityId": 4
+}
+
+
