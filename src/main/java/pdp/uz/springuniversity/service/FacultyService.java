@@ -36,4 +36,14 @@ public class FacultyService {
         facultyRepository.save(faculty);
         return new Result("Saved!", true);
     }
+
+
+    public Result getOne(int id){
+        Optional<Faculty> byId = facultyRepository.findById(id);
+        if (!byId.isPresent())return new Result("Not found",false);
+        return new Result("Found",true,byId.get());
+
+    }
+
+
 }

@@ -5,25 +5,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
-@Entity(name = "groups")
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Group {
+public class Teacher {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(length = 3, unique = true)
     private String name;
 
-//    @Column(nullable = false)
-    @ManyToOne
-    private Faculty faculty;
-
-
-    //mohiyati togri kelmadi
-//    @ManyToOne
-//    private Teacher teacher;
+    @OneToMany
+    private List<Group> groups;
 }

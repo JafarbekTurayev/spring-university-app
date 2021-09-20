@@ -53,3 +53,43 @@ Content-Type: application/json
 }
 
 
+###
+//group
+
+###
+POST http://localhost:80/group/add
+Content-Type: application/json
+
+{
+  "name": "211-Ax",
+  "faculty_id": 3
+}
+
+
+
+
+###
+#student add
+###
+POST http://localhost:80/student/add
+Content-Type: application/json
+
+{
+  "fullName": "Azizbek"
+}
+
+###
+GET http://localhost:80/faculty/one/2
+
+
+###
+
+POST http://localhost:80/subject/add
+Content-Type: application/json
+
+{
+  "name": "Axborot xavfsizligi"
+}
+
+
+
